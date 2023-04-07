@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import MyComponent from './components/MyComponent';
+import Title from './components/Title';
 
 function App() {
+  const redTitle = true
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* CSS global */}
+      <h1>React com CSS</h1>
+
+      {/* CSS de componente */}
+      <MyComponent />
+      <p>Este parágrafo é do app.js</p>
+
+      {/* classe dinâmica */}
+      <h2 className={redTitle ? "red-title" : "title"}>Este título vai ter classe dinâmica</h2>
+
+      {/* CSS Modules */}
+      <Title />
     </div>
   );
 }
